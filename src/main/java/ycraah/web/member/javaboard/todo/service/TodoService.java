@@ -25,4 +25,14 @@ public enum TodoService {
     }).collect(Collectors.toList());
     return todoList;
   }
+
+  public TodoDTO get(Long id){
+    TodoDTO dto = new TodoDTO();
+    dto.setId(id);
+    dto.setTitle("샘플 제목");
+    dto.setDueDate(LocalDate.now());
+    dto.setFinished(true);
+
+    return dto;
+  }
 }
